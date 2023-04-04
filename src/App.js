@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import "./styles/app.css";
+import "./styles/App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
@@ -13,6 +13,9 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Main />
+                <footer className="footer">
+                    <p>Developed by Patrick Brebner</p>
+                </footer>
             </div>
         );
     }
