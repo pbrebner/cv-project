@@ -87,13 +87,16 @@ class PopulateEducation extends Component {
             let dates = [];
             if (element.content.uniFrom && element.content.uniTo) {
                 dates.push(
-                    <p className="uniDates">{`${element.content.uniFrom} - ${element.content.uniTo}`}</p>
+                    <p
+                        key={element.id}
+                        className="uniDates"
+                    >{`${element.content.uniFrom} - ${element.content.uniTo}`}</p>
                 );
             } else {
-                dates.push(<p></p>);
+                dates.push(<p key={element.id}></p>);
             }
             let section = (
-                <div className="educationSection">
+                <div key={element.id} className="educationSection">
                     <div>
                         <p className="degree">{element.content.degree}</p>
                         <p className="uni">{element.content.uni}</p>
@@ -125,13 +128,16 @@ class PopulateWork extends Component {
             let dates = [];
             if (element.content.workFrom && element.content.workTo) {
                 dates.push(
-                    <p className="workDates">{`${element.content.workFrom} - ${element.content.workTo}`}</p>
+                    <p
+                        key={element.id}
+                        className="workDates"
+                    >{`${element.content.workFrom} - ${element.content.workTo}`}</p>
                 );
             } else {
-                dates.push(<p></p>);
+                dates.push(<p key={element.id}></p>);
             }
             let section = (
-                <div className="workSection">
+                <div key={element.id} className="workSection">
                     <div className="workSectionMain">
                         <div>
                             <p className="position">

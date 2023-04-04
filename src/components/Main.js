@@ -83,7 +83,7 @@ class Main extends Component {
 
     addPersonal() {
         const personal = [];
-        personal.push(<Personal />);
+        personal.push(<Personal key={0} />);
 
         return personal;
     }
@@ -92,7 +92,11 @@ class Main extends Component {
         const education = [];
         for (let i = 0; i < this.state.numberOfEducation; i++) {
             education.push(
-                <Education index={i} deleteEducation={this.deleteEducation} />
+                <Education
+                    key={i}
+                    index={i}
+                    deleteEducation={this.deleteEducation}
+                />
             );
         }
 
@@ -102,7 +106,7 @@ class Main extends Component {
     addWork() {
         const work = [];
         for (let i = 0; i < this.state.numberOfWork; i++) {
-            work.push(<Work index={i} deleteWork={this.deleteWork} />);
+            work.push(<Work key={i} index={i} deleteWork={this.deleteWork} />);
         }
 
         return work;
