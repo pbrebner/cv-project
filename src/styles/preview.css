@@ -12,9 +12,25 @@
     height: 900px;
     width: 700px;
 
+    /*width: min(700px, calc(100vw - 80px));*/
+
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    position: sticky;
+}
+
+@media (max-width: 800px) {
+    .previewContainer {
+        scale: 0.8;
+    }
+}
+
+@media (max-width: 600px) {
+    .previewContainer {
+        scale: 0.6;
+    }
 }
 
 .cvHeader {
