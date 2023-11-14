@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import "../styles/header.css";
+import headerIcon from "../assets/favicon.ico";
 
 class Header extends Component {
     constructor() {
@@ -9,7 +11,8 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <h1>CV Builder</h1>
+                <img className="headerIcon" src={headerIcon}></img>
+                <h1 className="heading">CV Builder</h1>
             </div>
         );
     }
